@@ -1,0 +1,13 @@
+# Circuit description
+
+Take a look at photo circuit.jpg
+
+
+Board: NodeMCU v3.
+
+The MPU-6050 Gyroscope-Accelerometer Sensor interacts via I2C, 
+blue and green wires connecting SCL pin to D1; SDA pin to D2 accordingly. Red and black wires are connecting to 3V and GND pin.
+
+Purpose of the button connected to the D6 pin (yellow wire) is to tell the board to go to so called "deep sleep" in order to restart the board and forget old WiFi credentials.  
+
+In order to "ESP.deepSleep()" work you need to connect GPIO16 pin with RST (orange wire).
